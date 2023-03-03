@@ -1,0 +1,82 @@
+.about {
+    background: linear-gradient(0deg, rgba(22, 22, 22, 0.5), rgba(22, 22, 22, 0.5)), url('../img/HeaderImage.jpg');
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 80px 0;
+
+    @include Laptop {
+        padding: 56px 0;
+    }
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__content {
+        border: 8px solid $color-primary-500;
+        width: 100%;
+        max-width: 920px;
+
+        h2 {
+            padding: 40px;
+            width: 100%;
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.8);
+
+            @include Laptop {
+                padding: 24px 0 40px;
+            }
+        }
+
+        h3 {
+            padding: 24px;
+            background-color: $color-primary-500;
+            width: 100%;
+            text-align: center;
+            font-weight: 500;
+            font-size: 32px;
+            text-transform: uppercase;
+            color: #4e4e4e;
+
+            @include Laptop {
+                padding: 16px;
+                font-size: 24px;
+            }
+        }
+
+        &__text {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 40px;
+            align-items: center;
+
+            @include Laptop {
+                gap: 24px;
+            }
+
+            p {
+                max-width: 626px;
+                width: 100%;
+                font-size: 20px;
+                line-height: 150%;
+                color: #4E4E4E;
+
+                @include Laptop {
+                    font-size: 18px;
+                    line-height: 150%;
+                }
+
+                @include Tablet {
+                    font-size: 16px;
+                    line-height: 24px;
+                }
+            }
+        }
+    }
+}

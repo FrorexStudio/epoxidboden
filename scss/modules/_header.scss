@@ -1,0 +1,48 @@
+.header {
+    background:  linear-gradient(180deg, rgba(30, 30, 30, 0.75) 0%, rgba(15, 14, 12, 0.25) 62.81%, rgba(30, 30, 30, 0.5) 100%), url('../img/HeaderImage.jpg');
+    width: 100%;
+    height: 900px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @include SmallTablet {
+        height: 700px;
+    }
+
+    &-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 100%;
+        gap: 24px;
+        justify-content: center;
+
+        h1 {
+            font-size: 104px;
+            text-transform: uppercase;
+            color: white;
+            font-weight: 800;
+            text-align: center;
+            max-width: 1290px;
+
+            @include Tablet {
+                font-size: 64px;
+                line-height: 120%;
+                max-width: 900px;
+            }
+
+            @include Mobile {
+                font-size: 48px;
+            }
+        }
+
+        p {
+            color: white;
+            font-size: 20px;
+            max-width: 700px;
+            text-align: center;
+            line-height: 30px;
+        }
+    }
+}

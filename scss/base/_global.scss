@@ -1,0 +1,79 @@
+@import './mixins';
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.container {
+    max-width: 1352px;
+    width: 100%;
+    margin: 0 auto;
+    padding-inline: 16px;
+
+    @include Laptop {
+        max-width: 1140px;
+    }
+
+    @include Mobile {
+        padding-inline: 8px;
+    }
+}
+
+.primary-color {
+    color: $color-primary-500;
+}
+
+.page-wrapper,
+.main-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 240px;
+
+    @include Laptop {
+        gap: 160px;
+    }
+
+    @include Tablet {
+        gap: 96px;
+    }
+
+    @include SmallTablet {
+        gap: 80px;
+    }
+}
+
+h2 {
+    font-size: 48px;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: #4E4E4E;
+    text-align: center;
+
+    @include Laptop {
+        font-size: 40px;
+    }
+
+    @include SmallTablet {
+        font-size: 32px;
+    }
+}
+
+.input {
+    padding: 16px;
+    border: 1px solid #CFCFCF;
+    background-color: transparent;
+    font-size: 20px;
+    font-weight: 500;
+
+    // @include SmallTablet {
+    //     font-size: 32px;
+    // }
+}

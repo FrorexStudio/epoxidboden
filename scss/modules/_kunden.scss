@@ -1,0 +1,161 @@
+@import '../base/mixins';
+
+.kunden {
+    background: linear-gradient(180deg, #F8F8F8 0%, #F2F2F2 100%);
+    backdrop-filter: blur(50px);
+    width: 100%;
+    padding: 80px 0;
+    overflow: hidden;
+
+    @include Laptop {
+        padding: 56px 0;
+    }
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 180px;
+        position: relative;
+
+        @include Laptop {
+            gap: 140px;
+        }
+
+        .backticks {
+            position: absolute;
+            left: 0;
+            top: 24px;
+            object-fit: cover;
+            object-position: center;
+
+            @include Laptop {
+                top: 0;
+            }
+        }
+    }
+
+    &__swiper {
+        width: 100%;
+        height: 100%;
+        position: relative;
+
+        .swiper {
+            &-slide {
+                width: 648px !important;
+                height: 100%;
+                opacity: 0.3;
+
+                &-active,
+                &-next {
+                    opacity: 1;
+                }
+
+                @include Laptop {
+                    width: 558px !important;
+                }
+            }
+
+            &-controls {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 24px;
+                width: 80px;
+                height: 80px;
+                border-radius: 50%;
+                background-color: #F9E214;
+                position: absolute;
+                top: 132px;
+                right: 0;
+                z-index: 2;
+
+                @include Laptop {
+                    top: 70px;
+                }
+
+                .swiper-button-prev,
+                .swiper-button-next {
+                    position: static !important;
+                    margin: 0 !important;
+                    padding: 0 !important;
+                    user-select: none;
+                    width: 24px;
+                    height: 24px;
+
+                    &::after {
+                        content: '';
+                    }
+                }
+            }
+
+        }
+    }
+
+    &__review {
+        width: 100%;
+        border-radius: 50%;
+        overflow: hidden;
+        border: 4px solid #F9E214;
+        padding: 10px;
+        width: 648px;
+        height: 648px;
+        background-color: #FFFFFF;
+        z-index: 1;
+
+        @include Laptop {
+            width: 558px;
+            height: 558px;
+        }
+
+        &__circle {
+            border: 2px solid #F9E214;
+            border-radius: 50%;
+            width: 100%;
+            height: 100%;
+            padding: 100px 80px 0 100px;
+        }
+
+        &__wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+
+            @include Laptop {
+                gap: 4px;
+            }
+
+            p {
+                font-size: 16px;
+                line-height: 150%;
+                color: #777777;
+                width: 100%;
+                padding-left: 92px;
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 13;
+                overflow: hidden;
+
+                @include Laptop {
+                    font-size: 14px;
+                    line-height: 21px;
+                }
+            }
+        }
+
+        &__content {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+
+            h4 {
+                font-weight: 700;
+                font-size: 20px;
+                line-height: 23px;
+                text-transform: uppercase;
+                color: #4E4E4E;
+            }
+
+        }
+    }
+}

@@ -1,0 +1,73 @@
+.features {
+
+    &__wrapper {
+        display: flex;
+        gap: 80px;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+
+        @include Laptop {
+            gap: 56px;
+        }
+    }
+
+    &__body {
+        display: grid;
+        gap: 24px;
+        grid-template-columns: repeat(3, 1fr);
+        width: 100%;
+
+        @include Tablet {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include SmallTablet {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+    }
+
+    &__card {
+        display: flex;
+        flex-direction: column;
+        // justify-content: center;
+        text-align: center;
+        align-items: center;
+        gap: 16px;
+        padding: 32px;
+        width: 100%;
+        background: linear-gradient(180deg, #F7F7F7 0%, #F1F1F1 100%);
+
+        &__icon {
+            width: 80px;
+            height: 80px;
+            // text-align: center;
+        }
+
+        &__content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+            width: 100%;
+
+            h3 {
+                color: #4e4e4e;
+                text-transform: uppercase;
+            }
+
+            p {
+                color: #777777;
+                line-height: 24px;
+            }
+        }
+
+        @include Tablet {
+            &:last-child {
+                grid-column: 1/3;
+            }
+        }
+    }
+}

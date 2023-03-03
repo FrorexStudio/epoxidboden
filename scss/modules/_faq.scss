@@ -1,0 +1,18 @@
+.faq {
+    width: 100%;
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 80px;
+        align-items: center;
+
+        @include Laptop {
+            gap: 56px;
+        }
+    }
+
+    &__content {
+        width: 100%;
+    }
+}

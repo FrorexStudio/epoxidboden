@@ -1,0 +1,109 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    align-items: center;
+    width: 100%;
+
+    &-up {
+        background-color: $color-primary-500;
+        width: 100%;
+
+        &__wrapper {
+            padding: 24px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        &__logo {
+            height: 45px;
+        }
+
+    }
+
+    &-body {
+        background: linear-gradient(180deg, #F8F8F8 0%, #F2F2F2 100%);
+        padding: 80px 0;
+        width: 100%;
+
+        @include Laptop {
+            padding: 56px 0;
+        }
+
+        &__wrapper {
+            display: flex;
+            gap: 200px;
+
+
+            @include Tablet {
+                gap: 140px;
+            }
+
+            @media screen and (max-width:850px) {
+                flex-direction: column;
+                gap: 72px;
+            }
+
+            @include SmallTablet {
+                gap: 32px;
+            }
+        }
+
+        &__col {
+            display: flex;
+            flex-direction: column;
+            gap: 80px;
+            align-items: flex-start;
+
+            @include SmallTablet {
+                gap: 32px;
+            }
+
+            &-group {
+                display: flex;
+                flex-direction: column;
+                gap: 16px;
+
+                h4 {
+                    font-weight: 500;
+                    font-size: 20px;
+                    text-transform: uppercase;
+                    color: #777777;
+                }
+
+                a {
+                    font-weight: 500;
+                    font-size: 20px;
+                    line-height: 23px;
+                    color: #4E4E4E;
+                }
+            }
+
+            &__lists {
+                display: flex;
+                flex-direction: row;
+                gap: 16px;
+                list-style-type: none;
+
+                &__list {
+                    width: 72px;
+                    height: 72px;
+
+                    @include Mobile {
+                        width: 56px;
+                        height: 56px;
+
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                            object-position: center;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

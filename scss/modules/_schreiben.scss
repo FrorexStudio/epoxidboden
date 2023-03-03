@@ -1,0 +1,114 @@
+.schreiben {
+    width: 100%;
+    background-image: url('../img/form.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+
+    &::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background: linear-gradient(0deg, rgba(22, 22, 22, 0.5), rgba(22, 22, 22, 0.5)),;
+    }
+
+    &__wrapper {
+        padding: 40px;
+        display: flex;
+        justify-content: center;
+
+        @include SmallTablet {
+            padding: 15px;
+        }
+    }
+
+    .form {
+        display: flex;
+        z-index: 1;
+        flex-direction: column;
+        gap: 32px;
+        padding: 40px 88px;
+        background-color: #FFFFFF;
+        border: 4px solid #F9E214;
+        box-shadow: 8px 8px 24px rgba(116, 116, 116, 0.3);
+
+        @include SmallTablet {
+            padding: 40px;
+            width: 100%;
+        }
+
+        @include Mobile {
+            padding: 16px;
+        }
+
+
+        &__fields {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+
+            input,
+            textarea {
+                outline: none;
+                border: none;
+                background-color: #F6F6F6;
+                padding: 16px;
+                font-size: 20px;
+                line-height: 23px;
+                color: #000000;
+
+                @include Laptop {
+                    font-size: 18px;
+                    line-height: 21px;
+                }
+
+                &::placeholder {
+                    font-size: 20px;
+                    line-height: 23px;
+                    color: #777777;
+
+                    @include Laptop {
+                        font-size: 18px;
+                        line-height: 21px;
+                    }
+                }
+
+                &:focus::placeholder {
+                    color: transparent;
+                }
+            }
+
+            textarea {
+                height: 200px;
+                resize: none;
+
+                @include SmallTablet {
+                    height: 160px;
+                }
+            }
+        }
+
+        input[type="submit"] {
+            padding: 16px 24px;
+            background-color: #F9E214;
+            border: 0;
+            box-shadow: 6px 6px 6px rgba(35, 35, 35, 0.04);
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 19px;
+            color: #4E4E4E;
+            text-transform: uppercase;
+            cursor: pointer;
+            -webkit-appearance: none;
+        }
+
+        input::-webkit-contacts-auto-fill-button {
+            opacity: 0;
+            visibility: hidden;
+        }
+    }
+}

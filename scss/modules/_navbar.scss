@@ -1,0 +1,128 @@
+.navbar {
+    background-color: rgba(35, 35, 34, 0.9);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 2;
+
+    .active {
+        display: block !important;
+    }
+
+    &-up {
+
+        &__wrapper {
+            width: 100%;
+            // padding: 16px 0;
+            padding: 8px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        &__logo {
+            // height: 65px;
+            height: 45px;
+        }
+    }
+
+    &-second {
+        border-top: 1px solid #979797;
+        border-bottom: 1px solid #979797;
+
+        @include Tablet {
+            display: none;
+        }
+
+        &__wrapper {
+            width: 100%;
+            // padding: 16px;
+            padding: 8px;
+        }
+
+        &__lists {
+            list-style-type: none;
+            display: flex;
+            gap: 16px;
+            justify-content: space-between;
+            align-items: center;
+
+            &__list {
+                &__link {
+                    color: white;
+                    text-decoration: none;
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
+
+    &__menu {
+        display: none;
+        position: absolute;
+        right: 16px;
+
+        &__list {
+            display: none;
+            background: #232322;
+            opacity: 0.9;
+            position: fixed;
+            right: 0;
+            height: 100%;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+            @include Mobile {
+                width: 100%;
+            }
+
+            ul {
+                display: flex;
+                flex-direction: column;
+                gap: 24px;
+                padding: 40px 52px 0;
+                list-style-type: none;
+
+                @include Mobile {
+                    align-items: center;
+                }
+
+                li {
+
+                    a {
+                        padding: 16px 0;
+                        font-weight: 500;
+                        font-size: 24px;
+                        line-height: 28px;
+                        text-decoration: none;
+                        color: #FFFFFF;
+                        text-transform: uppercase;
+                    }
+                }
+            }
+
+
+        }
+
+        &__burger {
+            display: none;
+            transition: all .2s ease-in-out;
+        }
+
+        &__cross {
+            width: 36px;
+            height: 36px;
+            display: none;
+            transition: all .2s ease-in-out;
+        }
+
+        .ci-primary {
+            fill: $color-primary-500;
+        }
+
+        @include Tablet {
+            display: block;
+        }
+    }
+}

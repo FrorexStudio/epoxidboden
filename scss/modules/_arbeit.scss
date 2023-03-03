@@ -1,0 +1,133 @@
+.arbeit {
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 80px;
+        width: 100%;
+        align-items: center;
+
+        @include Laptop {
+            gap: 56px;
+        }
+    }
+
+    &__cards {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        width: 100%;
+
+        @include SmallTablet {
+            gap: 16px;
+        }
+
+        &__group1 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0;
+
+            @include Tablet {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            @include SmallTablet {
+                display: flex;
+                flex-direction: column;
+                gap: 16px;
+            }
+        }
+
+        &__group2 {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+
+            @include SmallTablet {
+                display: flex;
+                flex-direction: column;
+                gap: 16px;
+            }
+        }
+    }
+
+    &__card {
+        padding: 40px;
+        border: 2px solid #F2F2F2;
+        gap: 24px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        z-index: 0;
+        transition: all 0.25s ease-in-out;
+        background-image: none;
+
+        &:hover {
+            &::after {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: #161616;
+                opacity: 0.6;
+                z-index: -1;
+            }
+            
+            background-image: var(--bg-arbeit-image);
+        }
+
+        @include Tablet {
+
+            &:nth-child(3) {
+                grid-column: 1/3;
+            }
+        }
+
+        &:hover {
+
+            h3,
+            p {
+                color: #FFFFFF;
+            }
+        }
+
+        h3 {
+            font-size: 32px;
+            font-weight: 500;
+            color: #4E4E4E;
+            line-height: 38px;
+
+            @include Laptop {
+                font-size: 24px;
+                line-height: 28px;
+            }
+        }
+
+        p {
+            font-size: 20px;
+            line-height: 150%;
+            color: #777777;
+
+            @include Laptop {
+                font-size: 18px;
+                line-height: 150%;
+            }
+        }
+
+        &__mark {
+            font-size: 80px;
+            color: $color-primary-500;
+            font-weight: 500;
+
+            @include Laptop {
+                font-size: 64px;
+                line-height: 75px;
+            }
+        }
+    }
+}

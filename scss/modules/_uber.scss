@@ -1,0 +1,120 @@
+.uber {
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 80px;
+
+        h2 {
+            align-self: center;
+        }
+
+        @include Laptop {
+            gap: 56px;
+        }
+
+        @include Tablet {
+            align-items: flex-start;
+        }
+    }
+
+    &__content {
+        display: grid;
+        grid-template-columns: 1fr;
+        row-gap: 160px;
+        position: relative;
+
+        @include Tablet {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 80px;
+        }
+
+        &::after {
+            content: '';
+            height: 100%;
+            position: absolute;
+            left: 50%;
+            width: 2px;
+            background-color: #F9E214;
+
+            @include Tablet {
+                display: none;
+            }
+        }
+
+        &__item {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 120px;
+            align-items: center;
+            width: 100%;
+
+            @include Laptop {
+                gap: 80px;
+            }
+
+            @include Tablet {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 32px;
+            }
+
+            &__side {
+                display: flex;
+                align-items: center;
+                gap: 32px;
+                width: 100%;
+
+                @include Tablet {
+                    flex-direction: column;
+                    align-items: flex-start;
+                    gap: 16px;
+                }
+
+                h3 {
+                    font-weight: 500;
+                    max-width: 338px;
+                    width: 100%;
+                    font-size: 32px;
+                    line-height: 38px;
+                    color: #4E4E4E;
+                    text-transform: uppercase;
+                    padding: 16px 0;
+                    width: 100%;
+                    position: relative;
+
+                    @include Laptop {
+                        font-size: 24px;
+                        line-height: 28px;
+                    }
+
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        height: 2px;
+                        background-color: #F9E214;
+                        width: 100%;
+                    }
+                }
+            }
+
+            p {
+                max-width: 650px;
+                width: 100%;
+                font-size: 20px;
+                line-height: 40px;
+                color: #4E4E4E;
+
+                @include Laptop {
+                    font-size: 18px;
+                    line-height: 150%;
+                }
+            }
+        }
+    }
+}
