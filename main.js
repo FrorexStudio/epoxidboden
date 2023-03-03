@@ -35,6 +35,39 @@ document.addEventListener('DOMContentLoaded', () => {
         })
     })
 
+    //calc
+
+    const checkRadio = (selector) => {
+        const foo = document.querySelectorAll(`[name=${selector}]`);
+        let fooIndex = 0;
+        foo.forEach((item, index) => {
+            if (item.checked) {
+                fooIndex = index;
+            }
+        })
+        return fooIndex;
+    }
+
+    const numberWithDots = (num) => {
+        return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+    }
+
+
+    const viewResult = () => {
+        const grose = document.querySelector('#grose');
+        const beschich = document.querySelector('#beschichtungsdicke');
+        const calcResult = document.querySelector('#calcResult');
+        const bodensArray = [55, 110, 1];
+        const kundentypArray = [1.19, 1];
+        if (grose.value >= 0 && beschich.value >= 0 && grose.value !== '' && beschich.value !== '') {
+            const result = numberWithDots(grose.value * beschich.value * bodensArray[checkRadio('Boden')] * kundentypArray[checkRadio('Kundentyp')]);
+            calcResult.innerHTML = result + '€';
+        }
+    }
+
+    const calcButton = document.querySelector('#calcButton');
+
+    calcButton.addEventListener('click', viewResult);
 
 
     //swiper
@@ -42,14 +75,14 @@ document.addEventListener('DOMContentLoaded', () => {
         direction: 'horizontal',
         lazy: true,
         loop: true,
-        slidesPerView: 2.5,
+        slidesPerView: 1,
         spaceBetween: 24,
         pagination: {
             el: ".swiper-pagination",
             clickable: true
         },
         breakpoints: {
-            320: {
+            0: {
                 slidesPerView: 1,
                 navigation: {
                     nextEl: '.swiper-button-next-md',
@@ -79,7 +112,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const swiper1 = new Swiper('.kunden__swiper', {
         direction: 'horizontal',
-        slidesPerView: 2.5,
+        slidesPerView: 2,
         spaceBetween: 24,
 
         navigation: {
@@ -87,14 +120,17 @@ document.addEventListener('DOMContentLoaded', () => {
             prevEl: '.swiper-button-prev',
         },
 
-        320: {
-            slidesPerView: 1
-        },
-        768: {
-            slidesPerView: 1.5,
-        },
-        1300: {
-            slidesPerView: 2.5,
+        breakpoints: {
+            0: {
+                slidesPerView: 1,
+                loop: true
+            },
+            768: {
+                slidesPerView: 1.5
+            },
+            1439: {
+                slidesPerView: 2
+            }
         }
     });
 

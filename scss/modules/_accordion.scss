@@ -33,6 +33,7 @@
             display: flex;
             gap: 48px;
             justify-content: space-between;
+            align-items: center;
             width: 100%;
             cursor: pointer;
             position: relative;
@@ -47,6 +48,11 @@
                 @include Laptop {
                     font-size: 24px;
                     line-height: 28px;
+                }
+
+                @include Mobile {
+                    font-size: 18px;
+                    line-height: 24px;
                 }
             }
         }
@@ -78,6 +84,14 @@
                 width: 100%;
             }
 
+            @include Mobile {
+
+                h4,
+                p {
+                    font-size: 16px;
+                }
+            }
+
             ul,
             ol {
                 display: flex;
@@ -85,12 +99,21 @@
                 gap: 32px;
                 list-style-position: inside;
 
+
+                @include Mobile {
+                    gap: 16px;
+                }
+
                 li {
                     color: #777777;
                     font-size: 20px;
                     line-height: 150%;
                     max-width: 732px;
                     width: 100%;
+
+                    @include Mobile {
+                        font-size: 16px;
+                    }
                 }
             }
         }

@@ -128,79 +128,87 @@
                             <h2>Kostenrechner</h2>
                         </div>
 
-                        <div class="calculator__content">
+                        <form class="calculator__content">
 
                             <div class="calculator__content__wrapper">
 
                                 <div class="calculator__content__column">
                                     <div class="calculator__content__checkbox__group-wrapper">
-    
+
                                         <div class="calculator__content__checkbox__group">
                                             <span class="badge">Typ des Bodens:</span>
-        
+
                                             <div class="calculator__content__checkbox__group__main">
                                                 <div class="calculator__content__checkbox__group__main__item">
-                                                    <input type="radio" id="normboden" checked value="Normaler Boden" name="Boden">
+                                                    <input type="radio" id="normboden" checked value="Normaler Boden"
+                                                        name="Boden">
                                                     <label for="normboden">Normaler Boden</label>
                                                 </div>
-        
+
                                                 <div class="calculator__content__checkbox__group__main__item">
-                                                    <input type="radio" id="designerboden" value="Designer Boden" name="Boden">
+                                                    <input type="radio" id="designerboden" value="Designer Boden"
+                                                        name="Boden">
                                                     <label for="designerboden">Designer Boden</label>
                                                 </div>
-        
+
                                                 <div class="calculator__content__checkbox__group__main__item">
-                                                    <input type="radio" id="mithoher" value="Mit hoher Belastung" name="Boden">
+                                                    <input type="radio" id="mithoher" value="Mit hoher Belastung"
+                                                        name="Boden">
                                                     <label for="mithoher">Mit hoher Belastung</label>
                                                 </div>
                                             </div>
                                         </div>
-        
+
                                         <div class="calculator__content__checkbox__group">
                                             <span class="badge">Kundentyp:</span>
-        
+
                                             <div class="calculator__content__checkbox__group__main">
                                                 <div class="calculator__content__checkbox__group__main__item">
-                                                    <input type="radio" id="privat" checked value="Privat" name="Kundentyp">
+                                                    <input type="radio" id="privat" checked value="Privat"
+                                                        name="Kundentyp">
                                                     <label for="privat">Privat</label>
                                                 </div>
-        
+
                                                 <div class="calculator__content__checkbox__group__main__item">
-                                                    <input type="radio" id="gewerblich" value="Gewerblich" name="Kundentyp">
+                                                    <input type="radio" id="gewerblich" value="Gewerblich"
+                                                        name="Kundentyp">
                                                     <label for="gewerblich">Gewerblich</label>
                                                 </div>
                                             </div>
                                         </div>
-        
+
                                     </div>
-    
+
                                     <div class="calculator__content__input__group-wrapper">
-        
+
                                         <div class="calculator__content__input__group">
                                             <span class="badge">Größe M²</span>
-        
+
                                             <div class="calculator__content__input__group__main__item">
-                                                <input type="number" id="grose" value="1200" min="0" name="grose" class="input">
+                                                <input type="number" id="grose" value="0" min="0" name="grose"
+                                                    class="input">
                                                 <!-- <label for="privat">Privat</label> -->
                                             </div>
                                         </div>
-        
+
                                         <div class="calculator__content__input__group">
                                             <span class="badge">Beschichtungsdicke MM.</span>
-        
+
                                             <div class="calculator__content__input__group__main__item">
-                                                <input type="number" id="Beschichtungsdicke" step="0.5" value="5" min="0" name="Beschichtungsdicke" class="input">
+                                                <input type="number" id="beschichtungsdicke" step="0.5" value="0"
+                                                    min="0" name="Beschichtungsdicke" class="input">
                                                 <!-- <label for="privat">Privat</label> -->
                                             </div>
                                         </div>
-        
+
                                     </div>
                                 </div>
 
-                                
+
                                 <div class="calculator__content__value-circle">
                                     <div class="calculator__content__value-circle__wrapper">
-                                        <span class="calculator__content__value-circle__number">10.000€</span>
+                                        <span class="calculator__content__value-circle__number"
+                                            id="calcResult">0€</span>
                                     </div>
                                 </div>
 
@@ -208,24 +216,26 @@
 
                             <div class="calculator__content__footer">
                                 <div class="calculator__content__buttons">
-                                    <button class="btn btn__primary">
+                                    <button type="button" class="btn btn__secondary">
                                         Schreiben SIe uns!
                                     </button>
-    
-                                    <button class="btn btn__secondary">
+
+                                    <button type="button" class="btn btn__primary" id="calcButton">
                                         Berechnung
                                     </button>
                                 </div>
 
                                 <p>
-                                    * Dabei handelt es sich um einen geschätzten Preis anhand Ihrer Angaben. Für ein verbindliches Angebot hinterlassen Sie bitte eine Anfrage und wir setzen uns schnellstmöglich mit Ihnen in Verbindung.
+                                    * Dabei handelt es sich um einen geschätzten Preis anhand Ihrer Angaben. Für ein
+                                    verbindliches Angebot hinterlassen Sie bitte eine Anfrage und wir setzen uns
+                                    schnellstmöglich mit Ihnen in Verbindung.
                                 </p>
-                                
+
                             </div>
 
-                        </div>
+                        </form>
 
-                        
+
                     </div>
                 </div>
             </section>
