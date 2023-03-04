@@ -16,7 +16,7 @@
         align-items: center;
         gap: 80px;
 
-        @include Laptop{
+        @include Laptop {
             gap: 56px;
         }
     }
@@ -106,7 +106,7 @@
             &__number {
                 font-size: 64px;
                 font-weight: 500;
-                
+
                 @include SmallTablet {
                     font-size: 32px;
                 }
@@ -143,6 +143,7 @@
 
                     .input {
                         width: 100%;
+                        outline: 0;
                     }
                 }
             }

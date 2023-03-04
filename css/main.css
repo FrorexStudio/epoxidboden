@@ -420,6 +420,7 @@ h2 {
 }
 .calculator__content__input__group__main__item .input {
   width: 100%;
+  outline: 0;
 }
 .calculator__content__buttons {
   display: flex;

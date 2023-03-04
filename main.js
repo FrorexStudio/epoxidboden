@@ -36,7 +36,6 @@ document.addEventListener('DOMContentLoaded', () => {
     })
 
     //calc
-
     const checkRadio = (selector) => {
         const foo = document.querySelectorAll(`[name=${selector}]`);
         let fooIndex = 0;
@@ -57,17 +56,20 @@ document.addEventListener('DOMContentLoaded', () => {
         const grose = document.querySelector('#grose');
         const beschich = document.querySelector('#beschichtungsdicke');
         const calcResult = document.querySelector('#calcResult');
-        const bodensArray = [55, 110, 1];
+        const bodensArray = [40, 75, 60];
         const kundentypArray = [1.19, 1];
+
         if (grose.value >= 0 && beschich.value >= 0 && grose.value !== '' && beschich.value !== '') {
-            const result = numberWithDots(grose.value * beschich.value * bodensArray[checkRadio('Boden')] * kundentypArray[checkRadio('Kundentyp')]);
+            const result = numberWithDots(Math.floor(grose.value * beschich.value * kundentypArray[checkRadio('Kundentyp')] * bodensArray[checkRadio('Boden')]));
             calcResult.innerHTML = result + '€';
         }
     }
 
     const calcButton = document.querySelector('#calcButton');
-
-    calcButton.addEventListener('click', viewResult);
+    calcButton.addEventListener('click', (event) => {
+        event.preventDefault();
+        viewResult();
+    });
 
 
     //swiper
