@@ -87,7 +87,17 @@
             aspect-ratio: 1/1;
 
             @supports not (aspect-ratio: 1 / 1) {
-                padding-top: 100%;
+                &::before {
+                    float: left;
+                    padding-top: 100%;
+                    content: "";
+                }
+
+                &::after {
+                    display: block;
+                    content: "";
+                    clear: both;
+                }
             }
 
             @include SmallTablet {
@@ -111,6 +121,7 @@
             &__number {
                 font-size: 64px;
                 font-weight: 500;
+                color: #4E4E4E;
 
                 @include SmallTablet {
                     font-size: 32px;
@@ -193,6 +204,10 @@
             flex-direction: column;
             gap: 32px;
             // justify-content: space-between;
+
+            p {
+                color: #4E4E4E;
+            }
         }
 
         &__column {
