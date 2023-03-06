@@ -88,10 +88,14 @@
             background-color: #FFFFFF;
 
             @include SmallTablet {
-                max-width: 380px;
-                max-height: 380px;
-                width: 100%;
-                height: 100%;
+                margin: 0 auto;
+                width: 300px;
+                height: 300px;
+            }
+
+            @include Mobile {
+                width: 240px;
+                height: 240px;
             }
 
             &__wrapper {
