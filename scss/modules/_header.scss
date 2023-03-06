@@ -1,5 +1,5 @@
 .header {
-    background:  linear-gradient(180deg, rgba(30, 30, 30, 0.75) 0%, rgba(15, 14, 12, 0.25) 62.81%, rgba(30, 30, 30, 0.5) 100%), url('../img/HeaderImage.jpg');
+    background: linear-gradient(180deg, rgba(30, 30, 30, 0.75) 0%, rgba(15, 14, 12, 0.25) 62.81%, rgba(30, 30, 30, 0.5) 100%), url('../img/HeaderImage.jpg');
     width: 100%;
     height: 900px;
     background-position: center;
@@ -25,6 +25,20 @@
             font-weight: 800;
             text-align: center;
             max-width: 1290px;
+
+            span {
+                font-size: 116px;
+
+                @include Tablet {
+                    font-size: 76px;
+                    line-height: 120%;
+                    max-width: 900px;
+                }
+
+                @include Mobile {
+                    font-size: 56px;
+                }
+            }
 
             @include Tablet {
                 font-size: 64px;

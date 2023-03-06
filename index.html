@@ -47,6 +47,7 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="navbar-second">
                     <div class="container">
                         <div class="navbar-second__wrapper">
@@ -195,10 +196,12 @@
                                             <span class="badge">Beschichtungsdicke MM.</span>
 
                                             <div class="calculator__content__input__group__main__item">
-                                                <input type="number" id="beschichtungsdicke" step="0.5" value="0"
+                                                <input type="number" id="beschichtungsdicke" step="0.5" value="1.5"
                                                     min="0" name="Beschichtungsdicke" class="input">
                                                 <!-- <label for="privat">Privat</label> -->
                                             </div>
+
+                                            <p>Стандарт толщины: 1.5мм</p>
                                         </div>
 
                                     </div>
@@ -813,15 +816,16 @@
             <section class="schreiben">
                 <div class="container">
                     <div class="schreiben__wrapper">
-                        <form action="" class="form">
-                            <h2>Schreiben sie uns</h2>
+                        <form action="" method="post" class="form" id="gform">
+                            <h2 class="form__header">Schreiben sie uns</h2>
                             <div class="form__fields">
-                                <input type="text" placeholder="Name" required>
-                                <input type="text" placeholder="Nachname" required>
-                                <input type="email" placeholder="Email" required>
-                                <textarea placeholder="Nachricht..." required></textarea>
+                                <input type="text" placeholder="Name" required id="name" name="Name">
+                                <input type="text" placeholder="Nachname" required id="nachname" name="Nachname">
+                                <input type="email" placeholder="Email" required id="email" name="Email">
+                                <textarea placeholder="Nachricht..." required id="nachricht"
+                                    name="Nachricht"></textarea>
                             </div>
-                            <input type="submit" value="Versenden">
+                            <input type="submit" value="Versenden" class="form__button">
                         </form>
                     </div>
                 </div>
@@ -1181,6 +1185,8 @@
         </footer>
     </div>
     <script src="main.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="g-form.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 </body>
 

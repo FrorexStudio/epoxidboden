@@ -23,6 +23,7 @@
         padding: 56px 0;
     }
 
+
     &__wrapper {
         display: flex;
         flex-direction: column;
@@ -32,6 +33,10 @@
 
         @include Laptop {
             gap: 140px;
+        }
+
+        @include SmallTablet {
+            gap: 64px;
         }
 
         .backticks {

@@ -195,6 +195,12 @@
                     }
                 }
             }
+
+            p {
+                margin-top: -16px;
+                font-size: 13px;
+                color: hsl(0, 0%, 50%);
+            }
         }
 
         &__buttons {
@@ -235,10 +241,9 @@
             display: flex;
             flex-direction: column;
             gap: 32px;
-            // justify-content: space-between;
 
             p {
-                color: #4E4E4E;
+                color: hsl(0, 0%, 50%);
             }
         }
 
