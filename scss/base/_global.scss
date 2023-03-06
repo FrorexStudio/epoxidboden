@@ -11,6 +11,10 @@ html {
     scroll-behavior: smooth;
 }
 
+body {
+    position: relative;
+}
+
 .container {
     max-width: 1352px;
     width: 100%;
@@ -78,14 +82,14 @@ h2 {
     // }
 }
 
-[type="radio"]{
+[type="radio"] {
 
     &:checked,
     &:not(:checked) {
         position: absolute;
         left: -9999px;
 
-        & + label {
+        &+label {
             position: relative;
             padding-left: 28px;
             cursor: pointer;
@@ -121,17 +125,18 @@ h2 {
             }
         }
     }
-    
-    &:checked + label:before {
+
+    &:checked+label:before {
         border: 1px solid #777777;
     }
-    
-    &:not(:checked) + label:after {
+
+    &:not(:checked)+label:after {
         opacity: 0;
         -webkit-transform: scale(0);
         transform: scale(0);
     }
-    &:checked + label:after {
+
+    &:checked+label:after {
         opacity: 1;
         -webkit-transform: scale(1);
         transform: scale(1);

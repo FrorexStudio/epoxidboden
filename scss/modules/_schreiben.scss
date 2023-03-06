@@ -104,6 +104,10 @@
             text-transform: uppercase;
             cursor: pointer;
             -webkit-appearance: none;
+
+            &:disabled{
+                background-color: hsl(54, 95%, 70%);
+            }
         }
 
         input::-webkit-contacts-auto-fill-button {

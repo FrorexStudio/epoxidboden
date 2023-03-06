@@ -136,4 +136,45 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+
+    //toast
+    let x;
+    let toast = document.querySelector("#toast");
+    function showToast() {
+        clearTimeout(x);
+        toast.style.transform = "translateX(0)";
+        x = setTimeout(() => {
+            toast.style.transform = "translateX(400px)"
+        }, 4000);
+    }
+    function closeToast() {
+        toast.style.transform = "translateX(50px)";
+    }
+
+
+    //form
+    const form = document.querySelector('#form');
+    const scriptUrl = 'https://script.google.com/macros/s/AKfycbwmSzSymMTuOaPhn4UHCeBAv4Kkhm7fdiigb0KrytTID8Q0qLOFxvortsC3oBqB5IoSsQ/exec';
+    const submitBtn = document.querySelector('#submit');
+
+    form.addEventListener('submit', e => {
+        e.preventDefault();
+
+        submitBtn.disabled = true;
+        submitBtn.value = 'Loading...';
+
+        fetch(scriptUrl, { method: 'POST', body: new FormData(form) })
+            .then(response => {
+                submitBtn.disabled = false;
+                submitBtn.value = 'Versenden';
+                form.reset();
+                showToast();
+                response
+            })
+            .catch(error => {
+                submitBtn.disabled = false;
+                submitBtn.value = 'Versenden';
+                alert('Error', error.message)
+            });
+    })
 })
