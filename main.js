@@ -148,7 +148,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 4000);
     }
     function closeToast() {
-        toast.style.transform = "translateX(50px)";
+        toast.style.transform = "translateX(400px)";
     }
 
 

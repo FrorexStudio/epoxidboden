@@ -1870,7 +1870,7 @@ h2 {
 }
 @media screen and (max-width: 480px) {
   .wrapper {
-    width: 100%;
+    width: 340px;
     padding: 0 0 10px 0;
   }
 }
