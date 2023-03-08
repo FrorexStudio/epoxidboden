@@ -2,8 +2,8 @@
     width: 380px;
     position: fixed;
     bottom: 0;
-    right: 0;
-    padding: 0 20px 20px 0;
+    left: 0;
+    padding: 0 0 20px 20px;
     z-index: 10;
 
     @include Mobile {
@@ -11,6 +11,7 @@
         padding: 0 0 10px 0;
     }
 }
+
 
 #toast {
     width: 100%;
@@ -24,7 +25,7 @@
     gap: 16px;
     align-items: center;
     grid-template-columns: 1.2fr 6fr 0.5fr;
-    transform: translate(400px);
+    transform: translate(-400px);
     transition: 1s;
     z-index: 1;
 }

@@ -136,20 +136,36 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    //nav socials
+    const closeBtn = document.querySelector(".nav-socials__close");
+    const mediaSocials = document.querySelector(".nav-socials__media");
+
+    closeBtn.addEventListener("click", () => {
+        closeBtn.classList.toggle("open");
+        mediaSocials.classList.toggle("active");
+    });
+
 
     //toast
     let x;
     let toast = document.querySelector("#toast");
+    let wrapper = document.querySelector(".wrapper");
+    let close = document.querySelector('#close');
     function showToast() {
         clearTimeout(x);
         toast.style.transform = "translateX(0)";
+
         x = setTimeout(() => {
-            toast.style.transform = "translateX(400px)"
+            toast.style.transform = "translateX(-400px)"
         }, 4000);
     }
     function closeToast() {
-        toast.style.transform = "translateX(400px)";
+        toast.style.transform = "translateX(-400px)";
     }
+
+    close.addEventListener('click', () => {
+        closeToast();
+    })
 
 
     //form

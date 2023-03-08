@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EpoxidBoden</title>
     <link rel="stylesheet" href="css/main.min.css">
-    <link rel="preload" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" as="style" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" as="style" />
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -29,13 +29,43 @@
                 <p>Success</p>
                 <p>Your changes are saved successfully.</p>
             </div>
-            <button id="close" onclick="closeToast()">
-                <svg xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 96 960 960" width="48">
-                    <path
-                        d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z" />
+            <button id="close"">
+                <svg xmlns=" http://www.w3.org/2000/svg" height="48" viewBox="0 96 960 960" width="48">
+                <path
+                    d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z" />
                 </svg>
             </button>
         </div>
+    </div>
+
+    <div class="nav-socials">
+        <div class="nav-socials__media active">
+            <a href="#">
+                <img src="./img/socials/mail.webp" alt="">
+            </a>
+            <a href="#">
+                <img src="./img/socials/whatsapp.webp" alt="">
+            </a>
+            <a href="#">
+                <img src="./img/socials/telegram.webp" alt="">
+            </a>
+            <a href="#">
+                <img src="./img/socials/facebook.webp" alt="">
+            </a>
+            <a href="#">
+                <img src="./img/socials/tik-tok.webp" alt="">
+            </a>
+            <a href="#">
+                <img src="./img/socials/instagram.webp" alt="">
+            </a>
+        </div>
+
+        <button class="nav-socials__close">
+            <svg xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 96 960 960" width="48">
+                <path
+                    d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z" />
+            </svg>
+        </button>
     </div>
 
 
@@ -240,10 +270,8 @@
 
                             <div class="calculator__content__footer">
                                 <div class="calculator__content__buttons">
-                                    <a href="#schreiben">
-                                        <button type="button" class="btn btn__secondary">
-                                            Schreiben SIe uns!
-                                        </button>
+                                    <a href="#schreiben" class="btn btn__secondary">
+                                        Schreiben SIe uns!
                                     </a>
 
                                     <button type="button" class="btn btn__primary" id="calcButton">
