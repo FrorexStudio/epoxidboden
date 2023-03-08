@@ -463,6 +463,10 @@ h2 {
   gap: 32px;
   width: 100%;
 }
+.calculator__content__buttons a {
+  text-decoration: none;
+  color: inherit;
+}
 @media screen and (max-width: 768px) {
   .calculator__content__buttons {
     flex-direction: column;

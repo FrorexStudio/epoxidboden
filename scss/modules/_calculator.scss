@@ -211,17 +211,18 @@
             display: flex;
             flex-direction: row;
             gap: 32px;
-            // max-width: 325px;
             width: 100%;
-            // margin-top: 39px + 24px;
+
+            a {
+                text-decoration: none;
+                color: inherit;
+            }
 
             @include SmallTablet {
                 flex-direction: column;
             }
 
             .btn {
-                // text-align: center;
-                // justify-content: center;
 
                 @include Tablet {
                     width: 100%;

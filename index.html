@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EpoxidBoden</title>
     <link rel="stylesheet" href="css/main.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" as="style" />
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -240,9 +240,11 @@
 
                             <div class="calculator__content__footer">
                                 <div class="calculator__content__buttons">
-                                    <button type="button" class="btn btn__secondary">
-                                        Schreiben SIe uns!
-                                    </button>
+                                    <a href="#schreiben">
+                                        <button type="button" class="btn btn__secondary">
+                                            Schreiben SIe uns!
+                                        </button>
+                                    </a>
 
                                     <button type="button" class="btn btn__primary" id="calcButton">
                                         Berechnung
@@ -834,7 +836,7 @@
                 </div>
             </section>
 
-            <section class="schreiben">
+            <section class="schreiben" id="schreiben">
                 <div class="container">
                     <div class="schreiben__wrapper">
                         <form action="" method="POST" class="form" id="form">
