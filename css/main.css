@@ -10,10 +10,6 @@ html {
   scroll-padding-top: 100px;
 }
 
-body {
-  position: relative;
-}
-
 .container {
   max-width: 1352px;
   width: 100%;
@@ -1939,6 +1935,10 @@ h2 {
   height: 24px;
 }
 
+.fixed {
+  position: relative;
+}
+
 .nav-socials {
   position: fixed;
   bottom: 24px;
@@ -1948,6 +1948,11 @@ h2 {
   gap: 24px;
   align-items: center;
   z-index: 2;
+}
+@media screen and (max-height: 600px) {
+  .nav-socials {
+    display: none;
+  }
 }
 .nav-socials .active {
   transform: translateX(100%);

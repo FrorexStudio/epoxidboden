@@ -1,3 +1,7 @@
+.fixed {
+    position: relative;
+}
+
 .nav-socials {
     position: fixed;
     bottom: 24px;
@@ -8,10 +12,13 @@
     align-items: center;
     z-index: 2;
 
+    @media screen and (max-height:600px) {
+        display: none;
+    }
+
     .active {
         transform: translateX(100%);
     }
-
 
     &__media {
         display: flex;
