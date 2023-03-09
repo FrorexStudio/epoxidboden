@@ -2,7 +2,6 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
-    AOS.init();
     
     //accordion
     const accordionBody = document.querySelectorAll('.accordion__item__body'),
