@@ -54,6 +54,13 @@
                     color: white;
                     text-decoration: none;
                     text-transform: uppercase;
+                    transition: all 0.35s ease-in-out;
+
+
+                    &:hover,
+                    &:active {
+                        color: $color-primary-500;
+                    }
                 }
             }
         }

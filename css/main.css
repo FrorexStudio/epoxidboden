@@ -3004,6 +3004,10 @@ Copyright (c) 2015 Daniel Eden
   color: white;
   text-decoration: none;
   text-transform: uppercase;
+  transition: all 0.35s ease-in-out;
+}
+.navbar-second__lists__list__link:hover, .navbar-second__lists__list__link:active {
+  color: hsl(54, 95%, 53%);
 }
 .navbar__menu {
   display: none;
@@ -3562,6 +3566,7 @@ Copyright (c) 2015 Daniel Eden
   color: white;
   transition: all 0.35s ease-in-out;
   text-align: center;
+  user-select: none;
 }
 @media screen and (max-width: 1440px) {
   .diens__lists__list {

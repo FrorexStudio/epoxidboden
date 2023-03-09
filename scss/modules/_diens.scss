@@ -134,6 +134,7 @@
             color: white;
             transition: all 0.35s ease-in-out;
             text-align: center;
+            user-select: none;
 
             @include Laptop {
                 font-size: 24px;
