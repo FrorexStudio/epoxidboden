@@ -1344,6 +1344,11 @@ h2 {
 .unsere__head h2 {
   text-transform: uppercase;
 }
+@media screen and (max-width: 1440px) {
+  .unsere__head {
+    gap: 40px;
+  }
+}
 .unsere__head .swiper {
   height: 100%;
   width: 100%;
@@ -1935,18 +1940,11 @@ h2 {
   height: 24px;
 }
 
-.fixed {
-  position: relative;
-}
-
 .nav-socials {
   position: fixed;
   bottom: 24px;
   right: 0;
-  display: flex;
-  flex-direction: column;
   gap: 24px;
-  align-items: center;
   z-index: 2;
 }
 @media screen and (max-height: 600px) {
@@ -1955,16 +1953,19 @@ h2 {
   }
 }
 .nav-socials .active {
-  transform: translateX(100%);
+  transform: translateX(150%);
 }
 .nav-socials__media {
   display: flex;
   align-items: flex-start;
   flex-direction: column;
+  gap: 12px;
   justify-content: center;
   background-color: transparent;
-  padding: 10px;
   transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  position: absolute;
+  bottom: 80px;
+  right: 24px;
 }
 .nav-socials__media a {
   text-decoration: none;
@@ -1974,7 +1975,6 @@ h2 {
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  margin: 6px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
   background-color: #FFFFFF;
   border: 3px solid #4E4E4E;
@@ -1989,16 +1989,22 @@ h2 {
   height: 56px;
   width: 56px;
   border-radius: 50%;
-  background-color: #777777;
+  background-color: #FFFFFF;
+  border: 2px solid hsl(54, 95%, 53%);
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
   cursor: pointer;
-  transform: rotate(45deg);
   transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.nav-socials__close::after {
+  content: url("../img/chat.svg");
+}
+.nav-socials__close.open.nav-socials__close::after {
+  content: url("../img/close.svg");
 }
 .nav-socials__close::before {
   content: "";
   position: absolute;
-  border: 4px solid #777777;
+  border: 4px solid hsl(54, 95%, 53%);
   left: -20px;
   opacity: 0;
   right: -20px;
@@ -2006,6 +2012,9 @@ h2 {
   bottom: -20px;
   border-radius: 50%;
   animation: pulse 2s linear infinite;
+}
+.nav-socials__close.open.nav-socials__close::before {
+  border: 4px solid #777777;
 }
 @keyframes pulse {
   0% {
@@ -2030,4 +2039,10 @@ h2 {
 .nav-socials__close.open {
   transform: rotate(90deg);
   background-color: #777777;
+  border: 2px solid #777777;
+}
+.nav-socials__close__wrapper {
+  position: absolute;
+  right: 24px;
+  bottom: 0;
 }/*# sourceMappingURL=main.css.map */

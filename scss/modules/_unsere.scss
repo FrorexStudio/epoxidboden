@@ -19,6 +19,10 @@
             text-transform: uppercase;
         }
 
+        @include Laptop {
+            gap: 40px;
+        }
+
         .swiper {
             height: 100%;
             width: 100%;

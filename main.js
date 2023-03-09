@@ -1,6 +1,9 @@
 'use strict';
 
 document.addEventListener('DOMContentLoaded', () => {
+
+    AOS.init();
+    
     //accordion
     const accordionBody = document.querySelectorAll('.accordion__item__body'),
         accordionHeader = document.querySelectorAll('.accordion__item__header'),
