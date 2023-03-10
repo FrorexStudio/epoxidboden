@@ -13,7 +13,7 @@
 
     .container {
 
-        @include SmallTablet {
+        @include Tablet {
             max-width: 100%;
             padding-inline: 0;
         }
@@ -35,7 +35,7 @@
             gap: 140px;
         }
 
-        @include SmallTablet {
+        @include Tablet {
             gap: 64px;
         }
 
@@ -50,7 +50,7 @@
                 top: 0;
             }
 
-            @include SmallTablet {
+            @include Tablet {
                 display: none;
             }
         }
@@ -61,7 +61,7 @@
         height: 100%;
         position: relative;
 
-        @include SmallTablet {
+        @include Tablet {
             border-top: 4px solid #F9E214;
             border-bottom: 2px solid #F9E214;
             border-left: 0;
@@ -94,7 +94,7 @@
                 height: 100%;
                 opacity: 0.3;
 
-                @include SmallTablet {
+                @include Tablet {
                     align-items: flex-start;
                     justify-content: flex-start;
                 }
@@ -102,7 +102,7 @@
                 &-active {
                     opacity: 1;
 
-                    @include SmallTablet {
+                    @include Tablet {
                         margin: 0 !important;
                         padding: 0 !important;
                     }
@@ -135,7 +135,7 @@
                     top: 70px;
                 }
 
-                @include SmallTablet {
+                @include Tablet {
                     top: inherit;
                     bottom: 16px;
                     right: 16px;
@@ -157,7 +157,7 @@
                     }
                 }
 
-                @include SmallTablet {
+                @include Tablet {
                     .swiper-button-prev {
                         display: none;
                     }
@@ -169,25 +169,34 @@
     }
 
     &__review {
-        width: 100%;
+        width: 648px;
+        height: 648px;
         border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         overflow: hidden;
         border: 4px solid #F9E214;
         padding: 10px;
-        width: 100%;
-        max-width: 648px;
-        height: 100%;
         background-color: #FFFFFF;
         z-index: 1;
         aspect-ratio: 1/1;
 
-        @include SmallTablet {
+        @include Laptop {
+            width: 480px;
+            height: 480px;
+        }
+
+        @include Tablet {
+            width: 100%;
+            height: 100%;
             aspect-ratio: initial;
             border-radius: 0;
             border: 0;
             padding: 10px 0;
             background: transparent;
         }
+
 
         &__circle {
             border: 2px solid #F9E214;
@@ -196,11 +205,11 @@
             height: 100%;
             padding: 100px 80px 0 100px;
 
-            @media screen and (max-width:900px) {
-                padding: 70px 80px 0 100px;
+            @include Laptop {
+                padding: 60px 100px 0 100px;
             }
 
-            @include SmallTablet {
+            @include Tablet {
                 border-radius: 0;
                 border: 0;
                 padding: 40px 16px;
@@ -213,6 +222,13 @@
             flex-direction: column;
             gap: 16px;
 
+            @include Laptop {
+                gap: 0;
+            }
+
+            @include Tablet {
+                gap: 16px;
+            }
 
             p {
                 font-size: 16px;

@@ -2,7 +2,7 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
-    
+
     //accordion
     const accordionBody = document.querySelectorAll('.accordion__item__body'),
         accordionHeader = document.querySelectorAll('.accordion__item__header'),
@@ -129,8 +129,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 slidesPerView: 1,
                 loop: true
             },
-            768: {
-                slidesPerView: 1.5
+            1024: {
+                slidesPerView: 2
             },
             1439: {
                 slidesPerView: 2
