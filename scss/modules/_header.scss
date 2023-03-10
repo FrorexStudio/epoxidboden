@@ -10,13 +10,10 @@
         height: 800px;
     }
 
-    @include SmallTablet {
+    @include Mobile {
         height: 700px;
     }
 
-    @include Mobile {
-        height: 550px;
-    }
 
     &-content {
         display: flex;
