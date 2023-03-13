@@ -31,26 +31,6 @@
             text-align: center;
             max-width: 1290px;
 
-            span {
-                font-size: 116px;
-
-                @include Laptop {
-                    font-size: 104px;
-                }
-
-                @include Tablet {
-                    font-size: 80px;
-                }
-
-                @include SmallTablet {
-                    font-size: 64px;
-                }
-
-                @include Mobile {
-                    font-size: 40px;
-                }
-            }
-
             @include Laptop {
                 font-size: 94px;
                 line-height: 130%;

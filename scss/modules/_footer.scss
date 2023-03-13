@@ -106,4 +106,26 @@
             }
         }
     }
+
+    &-legal {
+        width: 100%;
+        padding: 10px 20px;
+        background: linear-gradient(180deg, #F8F8F8 0%, #F2F2F2 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-top: 1px solid #777777;
+
+        a {
+            font-size: 18px;
+            font-weight: 500;
+            text-decoration: none;
+            color: #777777;
+            transition: all .25s ease-in-out;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
 }
