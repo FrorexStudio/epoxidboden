@@ -1,7 +1,10 @@
 @import 'base/variables';
 @import 'base/global';
 @import 'base/mixins';
+
+//plugins
 @import 'plugins/animate';
+@import 'plugins/swiper';
 
 // modules
 @import 'modules/navbar';
