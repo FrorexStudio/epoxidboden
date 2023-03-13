@@ -53,25 +53,35 @@ document.addEventListener('DOMContentLoaded', () => {
         return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
     }
 
-
     const viewResult = () => {
-        const grose = document.querySelector('#grose');
-        const beschich = document.querySelector('#beschichtungsdicke');
+        const grose = document.querySelector('#grose').value;
+        const beschich = document.querySelector('#beschichtungsdicke').value;
         const calcResult = document.querySelector('#calcResult');
         const bodensArray = [40, 75, 60];
         const kundentypArray = [1.19, 1];
 
-        if (grose.value >= 0 && beschich.value >= 0 && grose.value !== '' && beschich.value !== '') {
-            const result = numberWithDots(Math.floor(grose.value * beschich.value * kundentypArray[checkRadio('Kundentyp')] * bodensArray[checkRadio('Boden')]));
+        if (grose >= 0 && beschich >= 0 && grose !== '' && beschich !== '') {
+            const result = numberWithDots(Math.floor(grose * beschich * kundentypArray[checkRadio('Kundentyp')] * bodensArray[checkRadio('Boden')]));
             calcResult.innerHTML = result + '€';
         }
     }
 
-    const calcButton = document.querySelector('#calcButton');
-    calcButton.addEventListener('click', (event) => {
-        event.preventDefault();
-        viewResult();
-    });
+    const fields = document.querySelectorAll('input[type="number"]');
+
+    fields.forEach((field) => {
+        field.addEventListener('input', () => {
+            viewResult();
+        })
+    })
+
+    const radios = document.querySelectorAll('input[type="radio"]');
+
+    radios.forEach((radio) => {
+        radio.addEventListener('change', () => {
+            viewResult();
+        })
+    })
+
 
 
     //swiper
