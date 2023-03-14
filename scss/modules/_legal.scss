@@ -1,0 +1,13 @@
+.legal {
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    &__content {
+        a {
+            word-wrap: break-word;
+        }
+    }
+}

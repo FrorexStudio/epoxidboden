@@ -4226,6 +4226,11 @@ swiper-container .swiper-notification {
   width: 100%;
   align-items: center;
 }
+.diens__group p {
+  margin-top: -36px;
+  font-size: 14px;
+  color: #FFFFFF;
+}
 @media screen and (max-width: 1440px) {
   .diens__group {
     gap: 40px;
@@ -5679,4 +5684,13 @@ swiper-container .swiper-notification {
   position: absolute;
   right: 24px;
   bottom: 0;
+}
+
+.legal__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.legal__content a {
+  word-wrap: break-word;
 }/*# sourceMappingURL=main.css.map */
